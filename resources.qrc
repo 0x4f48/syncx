@@ -1,0 +1,21 @@
+<RCC>
+    <qresource prefix="/">
+        <file>images/arrow-left-green01.png</file>
+        <file>images/arrow-right-green01.png</file>
+        <file>images/climate-control-icon-down-wind.png</file>
+        <file>images/climate-control-icon-front-wind.png</file>
+        <file>images/climate-control-icon-human.png</file>
+        <file>images/wallpaper-dark-wood-pattern.png</file>
+        <file>images/wallpaper-blue-abstract.png</file>
+        <file>images/wallpaper-green-abstract.png</file>
+        <file>images/wallpaper-purple-01.png</file>
+        <file>images/chevron-left.svg</file>
+        <file>images/chevron-right.svg</file>
+        <file>images/ac.svg</file>
+        <file>images/air-conditioning.svg</file>
+        <file>images/rear-window-defrost.svg</file>
+        <file>images/recirculation.svg</file>
+        <file>images/windshield-defrost.svg</file>
+    </qresource>
+    <qresource prefix="/fonts"/>
+</RCC>
