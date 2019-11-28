@@ -18,49 +18,24 @@ PKGCONFIG += protobuf libudev
 # You can also select to disable deprecated APIs only up to a certain version of Qt.
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
-contains(QMAKE_TARGET.arch, arm) {
-
 SOURCES += \
-        main.cpp \
-    common/glib_utils.cpp \
-    hu/generated.arm/hu.pb.cc \
-    hu/hu_aad.cpp \
-    hu/hu_aap.cpp \
-    hu/hu_ssl.cpp \
-    hu/hu_tcp.cpp \
-    hu/hu_usb.cpp \
-    hu/hu_uti.cpp \
-    headunit.cpp \
-    launch.cpp
+	main.cpp \
+	common/glib_utils.cpp \
+	hu/generated.arm/hu.pb.cc \
+	hu/hu_aad.cpp \
+	hu/hu_aap.cpp \
+	hu/hu_ssl.cpp \
+	hu/hu_tcp.cpp \
+	hu/hu_usb.cpp \
+	hu/hu_uti.cpp \
+	headunit.cpp \
+	launch.cpp
 
-} else {
-
-SOURCES += \
-        main.cpp \
-    common/glib_utils.cpp \
-    hu/generated.x64/hu.pb.cc \
-    hu/hu_aad.cpp \
-    hu/hu_aap.cpp \
-    hu/hu_ssl.cpp \
-    hu/hu_tcp.cpp \
-    hu/hu_usb.cpp \
-    hu/hu_uti.cpp \
-    headunit.cpp \
-    launch.cpp
-
-
-}
 RESOURCES += qml.qrc \
     resources.qrc
 
 INCLUDEPATH +=hu
-
-contains(QMAKE_TARGET.arch, arm) {
-	INCLUDEPATH +=hu/generated.arm
-} else {
-
-	INCLUDEPATH +=hu/generated.x64
-}
+INCLUDEPATH +=hu/generated.arm
 INCLUDEPATH +=common
 
 # Additional import path used to resolve QML modules in Qt Creator's code model
